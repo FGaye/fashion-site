@@ -10,8 +10,26 @@ namespace Api.Data
         { 
     
         }
-        DbSet<Cart> Carts { get; set; }
-        DbSet<Product> Products { get; set; }
-        
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Product> Products { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<Role>()
+            .HasData(
+                new Role
+                {
+                    Id = "1",
+                    Name = "Admin",
+                    NormalizedName = "ADMIN"
+                },
+                new Role
+                {
+                    Id = "2",
+                    Name = "Member",
+                    NormalizedName = "MEMBER"
+                }
+            );
+        }
     }
 }
