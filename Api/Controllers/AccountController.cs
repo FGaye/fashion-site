@@ -56,6 +56,7 @@ namespace Api.Controllers
                 EmailAddress = user.Email,
                 Token = await _tokenService.CreateToken(user)
             };
+            
         }
     }
 }
