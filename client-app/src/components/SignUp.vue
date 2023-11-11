@@ -32,9 +32,11 @@
           </div>
         </form>
         <div class="form-text">Already have an account?</div>
-        <div class="row m-0 ">
+        <RouterLink to="/login">
+          <div class="row m-0 ">
           <button type="submit" value="Sign In" class="btn btn-secondary m-1">Sign In</button>
           </div>
+        </RouterLink>
       </div>
     </div>
   </div>

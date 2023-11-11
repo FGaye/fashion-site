@@ -29,14 +29,19 @@
               <input type="password" class="form-control" id="inputPassword3" v-model="formData.password">
             </div>
           </div>
-          <div class="row m-0 ">
+          <RouterLink to="/">
+            <div class="row m-0 ">
           <button type="submit" value="Sign In" class="btn btn-secondary m-1" @submit.prevent="logIn">Sign In</button>
           </div>
+          </RouterLink>
+          
         </form>
         <div class="form-text">Do not have an account?</div>
-        <div class="row m-0 ">
-          <button type="submit" value="Sign Up" class="btn btn-secondary m-1">Sign Up</button>
+          <RouterLink to="/register">
+            <div class="row m-0 ">
+           <button type="submit" value="Sign Up" class="btn btn-secondary m-1">Sign Up</button>
           </div>
+            </RouterLink>
       </div>
     </div>
   </div>
@@ -45,6 +50,7 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
+import { RouterLink } from "vue-router";
 
   const formData = ref({
     userName: '',
