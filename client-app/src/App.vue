@@ -1,11 +1,15 @@
 <script setup>
-import SignIn from './components/SignIn.vue'
-import SignUp from './components/SignUp.vue';
+import Cards from './components/Cards.vue';
+import Carousel from './components/Carousel.vue';
+import NavBar from './components/NavBar.vue';
+import Promotion from './components/Promotion.vue';
 </script>
 
 <template>
- 
-  <SignUp/>
+    <NavBar />
+    <Carousel class="px-4" />
+    <Cards />
+    <Promotion />
 </template>
 
 
